@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class BouncePadAni : MonoBehaviour
 {
-    private Animator animator; // 引用Animator组件
+    private Animator animator; 
     private static readonly int PlayBounce = Animator.StringToHash("PlayBounce");
 
     void Start()
     {
-        // 获取Animator组件
         animator = GetComponent<Animator>();
     }
 
@@ -18,7 +17,6 @@ public class BouncePadAni : MonoBehaviour
         Debug.Log("BouncePadAni: Player hit the BouncePad");
         if (other.gameObject.CompareTag("Player"))
         {
-            // 触发动画，假设动画状态名为"Activate"
             animator.SetTrigger(PlayBounce);
         }
     }

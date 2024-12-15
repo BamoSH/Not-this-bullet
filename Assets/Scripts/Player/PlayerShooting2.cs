@@ -37,7 +37,7 @@ public class PlayerShooting2 : MonoBehaviour
         {
             Shoot();
         }
-        Vector3 shootDirection = Vector3.right; // 默认向右射击
+        Vector3 shootDirection = Vector3.right; 
         
     }
     

@@ -9,9 +9,9 @@ using Random = UnityEngine.Random;
 public class BulletClip : MonoBehaviour
 {
     public static BulletClip Instance { get; private set; }
-    public GameObject[] clips; // 子弹预制体数组
-    public GameObject[] weaponBag; // 武器袋数组
-    public BulletManager bulletManager; // 引用子弹管理器
+    public GameObject[] clips; 
+    public GameObject[] weaponBag; 
+    public BulletManager bulletManager; 
     public int clipsSize = 50;
     public PlayerController PlayerController;
     
@@ -62,7 +62,7 @@ public class BulletClip : MonoBehaviour
         if (weaponBag.Length == 0)
         {
             Debug.Log("Warning: weaponBag is empty.");
-            return; // 提前退出方法，避免错误
+            return; 
         }
         for (int i = 0; i < clips.Length; i++)
         {
@@ -78,20 +78,17 @@ public class BulletClip : MonoBehaviour
         int newClipsLength = currentClipsLength + extraBullets;
         GameObject[] newClips = new GameObject[newClipsLength];
 
-        // 复制现有的子弹到新数组
         for (int i = 0; i < currentClipsLength; i++)
         {
             newClips[i] = clips[i];
         }
 
-        // 添加额外的子弹到新数组
         for (int i = currentClipsLength; i < newClipsLength; i++)
         {
             int randomIndex = Random.Range(0, weaponBag.Length);
             newClips[i] = weaponBag[randomIndex];
         }
 
-        // 更新 clips 数组
         clips = newClips;
         PlayerController.bulletCounter += extraBullets;
         OnBulletCountChanged?.Invoke(PlayerController.bulletCounter);

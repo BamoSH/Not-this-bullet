@@ -6,22 +6,20 @@ using UnityEngine;
 
 public class BulletBigger : MonoBehaviour
 {
-    public float scaleIncreaseAmount = 1.2f; // 敌人体积增大的倍数
+    public float scaleIncreaseAmount = 1.2f; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // 增大敌人体积
             IncreaseEnemySize(collision.gameObject);
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Trap"))
         {
             Debug.Log("Bullet hit trap");
-            // 触发重物掉落
             collision.gameObject.GetComponent<Trap>().Fall();
-            Destroy(gameObject); // 销毁子弹
+            Destroy(gameObject); 
         }
         
         if (collision.gameObject.CompareTag("Barrel"))
@@ -35,26 +33,25 @@ public class BulletBigger : MonoBehaviour
             {
                 barrel.explosionRadius *= 2;
             }
-            Destroy(gameObject); // 销毁子弹
+            Destroy(gameObject); 
         }
         if (collision.gameObject.CompareTag("BouncePad"))
         {
             Debug.Log("Hit BouncePad");
             BouncePad bouncePad = collision.gameObject.GetComponent<BouncePad>();
             Vector3 newSize = bouncePad.transform.localScale * 2;
-            // 设置一个尺寸上限，例如原始尺寸的两倍
             Vector3 maxSize = bouncePad.originalScale * 2;
             bouncePad.transform.localScale = Vector3.Min(newSize, maxSize);
             if (bouncePad.bounceStrength * 2 >= bouncePad.maxBounceStrength)
             {
                 bouncePad.bounceStrength = bouncePad.maxBounceStrength;
             }
-            Destroy(gameObject); // 销毁子弹
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Destroy(gameObject); // 销毁子弹
+            Destroy(gameObject); 
         }
     }
 

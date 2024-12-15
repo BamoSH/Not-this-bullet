@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    public Transform targetTeleporter; // 目标传送点
-    public float delayTime = 2.0f; // 玩家需要在传送点上停留的时间
+    public Transform targetTeleporter; 
+    public float delayTime = 2.0f; 
     private bool isPlayerInTeleporter = false;
     private float timer = 0f;
 
@@ -14,11 +14,9 @@ public class Teleporter : MonoBehaviour
     {
         if (isPlayerInTeleporter)
         {
-            // 累计停留时间
             timer += Time.deltaTime;
             if (timer >= delayTime)
             {
-                // 达到延迟时间，执行传送
                 TeleportPlayer();
             }
         }
@@ -28,9 +26,8 @@ public class Teleporter : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            // 玩家进入传送点
             isPlayerInTeleporter = true;
-            timer = 0f; // 重置计时器
+            timer = 0f; 
         }
     }
     
@@ -38,9 +35,8 @@ public class Teleporter : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            // 玩家离开传送点
             isPlayerInTeleporter = false;
-            timer = 0f; // 重置计时器
+            timer = 0f; 
         }
     }
 
@@ -48,10 +44,9 @@ public class Teleporter : MonoBehaviour
     {
         if (targetTeleporter != null)
         {
-            // 将玩家传送到目标传送点的位置
             GameObject.FindGameObjectWithTag("Player").transform.position = targetTeleporter.position;
-            isPlayerInTeleporter = false; // 防止立即再次触发传送
-            timer = 0f; // 重置计时器
+            isPlayerInTeleporter = false; 
+            timer = 0f; 
         }
     }
 }

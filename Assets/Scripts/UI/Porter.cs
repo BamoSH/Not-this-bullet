@@ -10,7 +10,6 @@ public class Porter : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player reached the portal!");
-            // 玩家通过了传送门
             GameManager.Instance.PlayerReachedPortal();
         }
     }

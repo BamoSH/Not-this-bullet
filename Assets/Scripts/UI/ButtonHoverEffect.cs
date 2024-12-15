@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ButtonHoverEffect : MonoBehaviour
 {
-    public Sprite defaultImage; // 默认图片
-    public Sprite hoverImage; // 鼠标悬浮图片
-    public Sprite clickImage; // 鼠标点击图片
+    public Sprite defaultImage; 
+    public Sprite hoverImage; 
+    public Sprite clickImage; 
 
 
-    private Image buttonImage; // 按钮的 Image 组件
+    private Image buttonImage; 
 
     private void Awake()
     {
@@ -19,16 +19,16 @@ public class ButtonHoverEffect : MonoBehaviour
 
     public void OnHoverEnter()
     {
-        buttonImage.sprite = hoverImage; // 切换到悬浮图片
+        buttonImage.sprite = hoverImage; 
     }
 
     public void OnHoverExit()
     {
-        buttonImage.sprite = defaultImage; // 恢复默认图片
+        buttonImage.sprite = defaultImage; 
     }
     
     public void OnClick()
     {
-        buttonImage.sprite = clickImage; // 切换到点击图片
+        buttonImage.sprite = clickImage;
     }
 }

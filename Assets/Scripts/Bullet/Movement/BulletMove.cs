@@ -11,7 +11,7 @@ public class BulletMove : MonoBehaviour, IBullet
 
      
     private Rigidbody2D _rb;
-    public float moveSpeed = 5; // 可调整的移动速度
+    public float moveSpeed = 5; 
 
     private Vector2 _direction;
     private PlayerController _playerController;
@@ -33,7 +33,7 @@ public class BulletMove : MonoBehaviour, IBullet
     
     public void Initialize(Vector2 dir)
     {
-        this._direction = dir.normalized; // 正规化方向
+        this._direction = dir.normalized; 
     }
     
     

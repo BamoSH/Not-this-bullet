@@ -7,15 +7,15 @@
 
 # Description
 
-![iPad Pro 12.9_ - 20](./assets/ReadMeAssets/iPad Pro 12.9_ - 20.png)
+![iPad Pro 12.9_ - 20](./Assets/ReadMeAssets/iPad Pro 12.9_ - 20.png)
 
-![iPad Pro 12.9_ - 21](./assets/ReadMeAssets/iPad Pro 12.9_ - 21.png)
+![iPad Pro 12.9_ - 21](./Assets/ReadMeAssets/iPad Pro 12.9_ - 21.png)
 
-![iPad Pro 12.9_ - 22](./assets/ReadMeAssets/iPad Pro 12.9_ - 22.png)
+![iPad Pro 12.9_ - 22](./Assets/ReadMeAssets/iPad Pro 12.9_ - 22.png)
 
-![iPad Pro 12.9_ - 23](./assets/ReadMeAssets/iPad Pro 12.9_ - 23.png)
+![iPad Pro 12.9_ - 23](./Assets/ReadMeAssets/iPad Pro 12.9_ - 23.png)
 
-![iPad Pro 12.9_ - 24](./assets/ReadMeAssets/iPad Pro 12.9_ - 24.png)
+![iPad Pro 12.9_ - 24](./Assets/ReadMeAssets/iPad Pro 12.9_ - 24.png)
 
 
 

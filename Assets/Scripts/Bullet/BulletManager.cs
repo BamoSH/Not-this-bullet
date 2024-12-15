@@ -7,9 +7,9 @@ using Random = UnityEngine.Random;
 public class BulletManager : MonoBehaviour
 {
     
-    public GameObject[] allBullets; // 存储所有子弹预制体的数组
-    public GameObject[] weaponBag; // 武器袋数组
-    public int weaponBagSize = 3; // 武器袋的大小
+    public GameObject[] allBullets; 
+    public GameObject[] weaponBag; 
+    public int weaponBagSize = 3; 
 
     private void Awake()
     {

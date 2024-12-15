@@ -6,20 +6,18 @@ using UnityEngine.UI;
 
 public class DeathMenu : MonoBehaviour
 {
-    public Button restartButton; // 用于在Inspector中引用按钮
+    public Button restartButton; 
 
     void Start()
     {
         if (restartButton != null)
         {
-            // 为按钮添加点击事件监听器
             restartButton.onClick.AddListener(OnRestartButtonClicked);
         }
     }
 
     void OnRestartButtonClicked()
     {
-        // 确保GameManager已经被正确加载
         if (GameManager.Instance != null)
         {
             GameManager.Instance.RestartLevel();

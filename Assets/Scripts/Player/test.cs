@@ -53,7 +53,7 @@ public class test : MonoBehaviour
         if (bulletPrefab != null)
         {
             var bulletInst = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-            bulletInst.GetComponent<Rigidbody2D>().velocity = shootDirection.normalized * 10f; // 子弹速度
+            bulletInst.GetComponent<Rigidbody2D>().velocity = shootDirection.normalized * 10f; 
         }
     }
 

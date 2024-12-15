@@ -7,13 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    // 当前关卡索引
     public int currentLevelIndex = 0;
 
-    // 关卡的总数
     public int totalLevels = 2;
 
-    // 最后一关完成后加载的场景名称
     public string endGameSceneName = "End";
 
     private void Awake()
@@ -39,17 +36,14 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        // 检查是否还有更多的关卡
         if (currentLevelIndex < totalLevels - 1)
         {
-            // 加载下一关
             currentLevelIndex++;
             SceneManager.LoadScene("Level " + currentLevelIndex);
             SceneManager.LoadSceneAsync("UIandPlayerScene", LoadSceneMode.Additive);
         }
         else
         {
-            // 所有关卡完成，加载结束游戏的场景
             SceneManager.LoadScene(endGameSceneName);
         }
     }
@@ -74,7 +68,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayerReachedPortal()
     {
-        // 玩家通过当前关卡，加载下一关
         LoadNextLevel();
     }
 }

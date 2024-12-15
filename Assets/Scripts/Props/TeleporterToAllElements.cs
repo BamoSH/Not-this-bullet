@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TeleporterToAllElements : MonoBehaviour
 {
-    public Transform targetTeleporter; // 目标传送点
-    public float delayTime = 2.0f; // 物体需要在传送点上停留的时间
+    public Transform targetTeleporter; 
+    public float delayTime = 2.0f; 
 
     private Dictionary<GameObject, float> objectsInTeleporter = new Dictionary<GameObject, float>();
 
@@ -17,7 +17,6 @@ public class TeleporterToAllElements : MonoBehaviour
             objectsInTeleporter[item.Key] = item.Value + Time.deltaTime;
             if (item.Value >= delayTime)
             {
-                // 达到延迟时间，执行传送
                 TeleportObject(item.Key);
                 objectsToRemove.Add(item.Key);
             }
@@ -33,7 +32,7 @@ public class TeleporterToAllElements : MonoBehaviour
     {
         if (!objectsInTeleporter.ContainsKey(other.gameObject))
         {
-            objectsInTeleporter.Add(other.gameObject, 0f); // 重置计时器
+            objectsInTeleporter.Add(other.gameObject, 0f); 
         }
     }
 
@@ -49,7 +48,7 @@ public class TeleporterToAllElements : MonoBehaviour
     {
         if (targetTeleporter != null)
         {
-            obj.transform.position = targetTeleporter.position; // 将物体传送到目标传送点的位置
+            obj.transform.position = targetTeleporter.position; 
         }
     }
 }

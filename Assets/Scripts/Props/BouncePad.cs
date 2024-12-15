@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class BouncePad : MonoBehaviour
 {
-    public float bounceStrength = 35f; // 跳板的弹跳力度
+    public float bounceStrength = 35f; 
     public float maxBounceStrength = 60f;
-    public Vector3 originalScale; // 跳板的原始尺寸
+    public Vector3 originalScale; 
 
     private void Awake()
     {
@@ -21,7 +21,6 @@ public class BouncePad : MonoBehaviour
             Rigidbody2D playerRigidbody = collision.gameObject.GetComponent<Rigidbody2D>();
             if (playerRigidbody != null)
             {
-                // 给玩家添加向上的力
                 playerRigidbody.AddForce(Vector2.up * bounceStrength, ForceMode2D.Impulse);
             }
         }
@@ -34,7 +33,6 @@ public class BouncePad : MonoBehaviour
     //         Rigidbody2D playerRigidbody = other.gameObject.GetComponent<Rigidbody2D>();
     //         if (playerRigidbody != null)
     //         {
-    //             // 给玩家添加向上的力
     //             playerRigidbody.AddForce(Vector2.up * bounceStrength, ForceMode2D.Impulse);
     //         }
     //     }

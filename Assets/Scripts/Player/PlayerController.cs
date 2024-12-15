@@ -22,15 +22,15 @@ public class PlayerController : MonoBehaviour
     public int counter = 0;
     public int bulletCounter = 0;
     
-    public float dashSpeed = 20f; // 冲刺速度
-    public float dashTime = 0.2f; // 冲刺持续时间
+    public float dashSpeed = 20f; 
+    public float dashTime = 0.2f; 
 
     private bool isDashing;
     private float dashTimeLeft;
     
     private Rigidbody2D rb;
     private PhysicsCheck _physicsCheck;
-    public bool _facingRight = true; // 假设角色初始朝向右边
+    public bool _facingRight = true;
     public Vector2 shootDirection;
     
     public static event Action<int> OnBulletCountChanged;
@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
         set
         {
             bulletCounter = value;
-            // 当子弹数量发生变化时，触发事件
             OnBulletCountChanged?.Invoke(bulletCounter);
         }
     }
@@ -114,7 +113,7 @@ public class PlayerController : MonoBehaviour
         _facingRight = !_facingRight;
         var transform1 = transform;
         Vector3 theScale = transform1.localScale;
-        theScale.x *= -1; // 只翻转x轴
+        theScale.x *= -1; 
         transform1.localScale = theScale;
     }
     
@@ -128,15 +127,13 @@ public class PlayerController : MonoBehaviour
     {
         if (dashTimeLeft > 0)
         {
-            // 应用冲刺速度
             rb.velocity = new Vector2((_facingRight ? 1 : -1) * dashSpeed, rb.velocity.y);
             dashTimeLeft -= Time.deltaTime;
         }
         else
         {
-            // 冲刺结束
             isDashing = false;
-            rb.velocity = new Vector2(0, rb.velocity.y); // 可以根据需要调整
+            rb.velocity = new Vector2(0, rb.velocity.y); 
         }
     }
     
@@ -166,19 +163,17 @@ public class PlayerController : MonoBehaviour
         {
             if (Mathf.Abs(inputDirection.x)<1)
             {
-                // 同时按下两个键，将向量长度标准化为1
                 shootDirection = inputDirection / Mathf.Sqrt(2) * 2;
             }
             else
             {
-                // 只按下了一个键，标准化
                 shootDirection = inputDirection.normalized;
             }
         }
         var bulletPrefab = Instantiate(bulletClip.clips[counter++]);        
         if (BulletCount > 0)
         {
-            BulletCount--; // 这会自动触发事件
+            BulletCount--;
         }
         
         UIManager.Instance.UpdateBulletIcon(counter);
@@ -207,7 +202,6 @@ public class PlayerController : MonoBehaviour
     //     if (collision.gameObject.CompareTag("Trap"))
     //     {
     //         Debug.Log("Player hit trap");
-    //         // 触发重物掉落
     //         
     //     }
     //
