@@ -11,7 +11,7 @@
 
 ![Image Page1](https://github.com/BamoSH/Not-this-bullet/blob/master/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2021.png)
 
-![Image Page2](https://github.com/BamoSH/Not-this-bullet/blob/master/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2022.png）
+![Image Page2](https://github.com/BamoSH/Not-this-bullet/blob/master/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2022.png)
 
 ![Image Page3](https://github.com/BamoSH/Not-this-bullet/blob/master/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2023.png)
 
