@@ -7,7 +7,7 @@
 
 # Description
 
-[![iPad Pro 12.9_ - 20](./Assets/ReadMeAssets/iPad Pro 12.9_ - 20.png)](https://github.com/BamoSH/Not-this-bullet/blob/master/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2020.png)](https://github.com/BamoSH/Not-this-bullet/blob/master/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2020.png)
+[![iPad Pro 12.9_ - 20](https://github.com/BamoSH/Not-this-bullet/blob/master/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2020.png）
 
 ![iPad Pro 12.9_ - 21](./Assets/ReadMeAssets/iPad Pro 12.9_ - 21.png)
 
