@@ -2,7 +2,7 @@
 
 # Attention
 
-+ **The version of the unity editor used for the game is Unity 2022.3.14f1c1 **
++ The version of the unity editor used for the game is Unity 2022.3.14f1c1
 + Unzip `Not This Bullet Demo.zip` to play game demo
 
 # Description
