@@ -7,7 +7,7 @@
 
 # Description
 
-![image Title](./Assets/ReadMeAssets/iPad Pro 12.9_ - 20.png）
+![Image Title](https://github.com/BamoSH/Not-this-bullet/blob/821b135824bc238a2f07ffd4b5b8dc0c6efd14b2/Assets/ReadMeAssets/iPad%20Pro%2012.9_%20-%2020.png)
 
 ![iPad Pro 12.9_ - 21](./Assets/ReadMeAssets/iPad Pro 12.9_ - 21.png)
 
